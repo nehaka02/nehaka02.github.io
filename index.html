@@ -7,8 +7,7 @@
   <style>
     :root {
       --navy: #0b2545;
-      --navy-light: #1d3557;
-      --white: #ffffff;
+      --muted-sand: #c2b280;
       --bg: #f5f7fa;
       --text-dark: #1a1a1a;
       --text-muted: #475569;
@@ -22,7 +21,7 @@
     }
     header {
       background: var(--navy);
-      color: var(--white);
+      color: var(--bg);
       padding: 3rem 1.5rem;
       text-align: center;
       border-bottom-left-radius: 24px;
@@ -51,20 +50,28 @@
       margin-bottom: 1rem;
     }
 
+    .category {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--muted-sand);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
     .project-card {
-      background: var(--white);
+      background: var(--bg);
       padding: 1.75rem;
       margin-bottom: 1.75rem;
-      border-radius: 20px; /* Rounded squares */
+      border-radius: 20px;
       border: 1px solid var(--card-border);
       box-shadow: 0 4px 10px rgba(0,0,0,0.07);
     }
     .project-card h2 {
       margin-top: 0;
-      color: var(--navy-light);
+      color: var(--navy);
     }
     .project-card a {
-      color: var(--navy-light);
+      color: var(--muted-sand);
       font-weight: bold;
     }
 
@@ -88,17 +95,35 @@
   <div class="container" id="projects">
     <h1>Projects</h1>
 
+    <div class="category">Cybersecurity</div>
     <div class="project-card">
-      <h2>Project Title 1</h2>
-      <p>A short description of what the project is, what technologies you used, and why it's cool.</p>
+      <h2>Browser Exploitation</h2>
+      <p></p>
       <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
     </div>
-
     <div class="project-card">
-      <h2>Project Title 2</h2>
-      <p>Another project description goes here. You can add as many of these as you want.</p>
+      <h2>Fuzzing Leaked Firewall Code</h2>
+      <p></p>
       <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
     </div>
+    <div class="project-card">
+      <h2>Custom C2 Server For Apache Vulnerability</h2>
+      <p></p>
+      <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="category">Applied Math</div>
+    <div class="project-card">
+      <h2>A Mathematical Investigation of Monte Carlo Tree Search</h2>
+      <p></p>
+      <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub</a>
+    </div>
+    <div class="project-card">
+      <h2>Understanding Turing Pattern Formation on Butterfly Wings</h2>
+      <p></p>
+      <a href="https://github.com/yourusername/project5" target="_blank">View on GitHub</a>
+    </div>
+
   </div>
 
   <div class="container" id="about">

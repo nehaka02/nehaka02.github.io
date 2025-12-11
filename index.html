@@ -3,88 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects</title>
+  <title>Neha Aryasomayajula — Projects</title>
+
   <style>
     :root {
       --navy: #0b2545;
-      --muted-sand: #c2b280;
-      --bg: #f5f7fa;
+      --sand: #c2b280;
+      --bg: #fafbfc;
       --text-dark: #1a1a1a;
-      --text-muted: #415a77;
-      --card-border: #e2e8f0;
+      --text-muted: #5a6a85;
+      --card-border: #e5e8ec;
     }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text-dark);
+      line-height: 1.6;
     }
+
+    /* --- Header --- */
     header {
       background: var(--navy);
-      color: var(--bg);
-      padding: 3rem 1.5rem;
+      color: white;
+      padding: 2.75rem 1rem;
       text-align: center;
-      border-bottom-left-radius: 24px;
-      border-bottom-right-radius: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+
+    header h1 {
+      margin: 0 0 1rem 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
     nav a {
-      color: #dbeafe;
-      margin: 0 1rem;
+      color: #e6eefc;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: opacity .2s ease;
     }
     nav a:hover {
-      text-decoration: underline;
+      opacity: 0.7;
     }
 
+    /* --- Layout --- */
     .container {
       max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 1.25rem;
+      padding: 2rem 1rem;
+      margin: auto;
     }
 
-    h1 {
+    h2.section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
       color: var(--navy);
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
+      margin-top: 2rem;
     }
 
     .category {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--muted-sand);
-      margin-top: 2rem;
-      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--sand);
+      margin-top: 2.8rem;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
+    /* --- Cards --- */
     .project-card {
-      background: var(--bg);
-      padding: 1.75rem;
-      margin-bottom: 1.75rem;
-      border-radius: 20px;
+      background: white;
+      padding: 1.5rem 1.75rem;
+      border-radius: 16px;
       border: 1px solid var(--card-border);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+      margin-bottom: 1.5rem;
+      transition: transform .18s ease, box-shadow .18s ease;
     }
-    .project-card h2 {
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
       margin-top: 0;
+      font-weight: 600;
       color: var(--navy);
     }
+
     .project-card a {
-      color: var(--muted-sand);
-      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.4rem;
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--sand);
+      padding-bottom: 2px;
+    }
+    .project-card a:hover {
+      opacity: 0.75;
     }
 
     footer {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2.5rem 1rem;
       color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #dfe3e8;
+      margin-top: 2rem;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>My Personal Projects</h1>
+    <h1>Neha Aryasomayajula</h1>
     <nav>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
@@ -92,52 +127,48 @@
     </nav>
   </header>
 
-  <div class="container" id="projects">
-    <h1>Projects</h1>
+  <main class="container" id="projects">
+    <h2 class="section-title">Projects</h2>
 
     <div class="category">Cybersecurity</div>
+
     <div class="project-card">
-      <h2>Browser Exploitation</h2>
-      <p></p>
-      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+      <h3>Browser Exploitation</h3>
+      <p>Research + implementation work on modern browser exploitation primitives.</p>
+      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub →</a>
     </div>
+
     <div class="project-card">
-      <h2>Fuzzing Leaked Firewall Code</h2>
-      <p></p>
-      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+      <h3>Fuzzing Leaked Firewall Code</h3>
+      <p>Fuzzing and security auditing of exposed firewall firmware.</p>
+      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub →</a>
     </div>
+
     <div class="project-card">
-      <h2>Custom C2 Server For Apache Vulnerability</h2>
-      <p></p>
-      <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+      <h3>Custom C2 Server for Apache Vulnerability</h3>
+      <p>Exploit chain demonstration + C2 server design.</p>
+      <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub →</a>
     </div>
 
     <div class="category">Applied Math</div>
+
     <div class="project-card">
-      <h2>A Mathematical Investigation of Monte Carlo Tree Search</h2>
-      <p></p>
-      <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub</a>
-    </div>
-    <div class="project-card">
-      <h2>Understanding Turing Pattern Formation on Butterfly Wings</h2>
-      <p></p>
-      <a href="https://github.com/yourusername/project5" target="_blank">View on GitHub</a>
+      <h3>A Mathematical Investigation of Monte Carlo Tree Search</h3>
+      <p>Theoretical study of MCTS convergence, tuning, and regret.</p>
+      <a href="https://github.com/yourusername/project4" target="_blank">View on GitHub →</a>
     </div>
 
-  </div>
+    <div class="project-card">
+      <h3>Understanding Turing Pattern Formation on Butterfly Wings</h3>
+      <p>Analysis + simulations of morphogen interactions and pattern emergence.</p>
+      <a href="https://github.com/yourusername/project5" target="_blank">View on GitHub →</a>
+    </div>
+  </main>
 
-  <div class="container" id="about">
-    <h1>About Me</h1>
-    <p>Write a short bio. Who are you? What do you work on? What are your interests?</p>
-  </div>
+  <section class="container" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>Write your clean, concise, professional bio here.</p>
+  </section>
 
-  <div class="container" id="contact">
-    <h1>Contact</h1>
-    <p>nehaka02@gmail.com</p>
-  </div>
-
-  <footer>
-    © 2025 Neha Aryasomayajula — Hosted on GitHub Pages
-  </footer>
-</body>
-</html>
+  <section class="container" id="contact">
+    <h2 clas

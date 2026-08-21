@@ -3,178 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neha Aryasomayajula — Projects</title>
+  <title>Neha Aryasomayajula — Security & Math</title>
 
   <style>
     :root {
-      --navy: #0b2545;
-      --sand: #c2b280;
-      --bg: #fafbfc;
-      --text-dark: #1a1a1a;
-      --text-muted: #5a6a85;
-      --card-border: #e5e8ec;
+      --bg-oatmeal: #f4f1ea;
+      --text-black: #111111;
+      --border-color: #222222;
+      --card-bg: #eae6df;
     }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text-dark);
-      line-height: 1.6;
+      font-family: "Courier New", Courier, monospace;
+      background: var(--bg-oatmeal);
+      color: var(--text-black);
+      line-height: 1.5;
     }
 
-    /* --- Header --- */
+    /* --- Header & ASCII --- */
     header {
-      background: var(--navy);
-      color: white;
-      padding: 2.75rem 1rem;
+      padding: 3rem 1rem 1rem 1rem;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0 0 1rem 0;
-      font-size: 2rem;
-      font-weight: 600;
+    .ascii-art {
+      display: inline-block;
+      text-align: left;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      line-height: 1.1;
+      white-space: pre;
+      color: var(--text-black);
+      overflow-x: auto;
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
     }
 
     nav a {
-      color: #e6eefc;
+      color: var(--text-black);
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 500;
-      transition: opacity .2s ease;
+      margin: 0 0.75rem;
+      font-weight: bold;
     }
+
     nav a:hover {
-      opacity: 0.7;
+      text-decoration: underline;
     }
 
     /* --- Layout --- */
     .container {
-      max-width: 900px;
-      padding: 2rem 1rem;
+      max-width: 800px;
+      padding: 1rem 1rem 2rem 1rem;
       margin: auto;
     }
 
     h2.section-title {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--text-black);
       margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.3rem;
     }
 
     .category {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--sand);
-      margin-top: 2.8rem;
-      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: var(--text-black);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.1em;
     }
 
-    /* --- Cards --- */
+    /* --- Minimal Terminal Cards --- */
     .project-card {
-      background: white;
-      padding: 1.5rem 1.75rem;
-      border-radius: 16px;
-      border: 1px solid var(--card-border);
-      margin-bottom: 1.5rem;
-      transition: transform .18s ease, box-shadow .18s ease;
-    }
-    .project-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border: 1px solid var(--border-color);
+      margin-bottom: 1.25rem;
     }
 
     .project-card h3 {
       margin-top: 0;
-      font-weight: 600;
-      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--text-black);
+    }
+
+    .project-card p {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
     }
 
     .project-card a {
       display: inline-block;
-      margin-top: 0.4rem;
-      color: var(--navy);
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1px solid var(--sand);
-      padding-bottom: 2px;
+      color: var(--text-black);
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 0.9rem;
     }
+
     .project-card a:hover {
-      opacity: 0.75;
+      background: var(--text-black);
+      color: var(--bg-oatmeal);
+      text-decoration: none;
     }
 
     footer {
       text-align: center;
       padding: 2.5rem 1rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      border-top: 1px solid #dfe3e8;
-      margin-top: 2rem;
+      color: var(--text-black);
+      font-size: 0.85rem;
+      border-top: 1px dashed var(--border-color);
+      margin-top: 3rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Neha Aryasomayajula</h1>
+    <pre class="ascii-art">
+ _  _ ____ _  _ ____    ____ ____ _  _ ____ ____ ____ _  _ ____ _  _  _ ____ _    ____ 
+ |\ | |___ |__| |__|    |__| |__/ |__| |___ |__/ |__| |\ | |__| |__|  | |__| |    |__| 
+ | \| |___ |  | |  |    |  | |  \  |  |__|  |  \ |  | | \| |  | |  | \| |  | |___ |  | 
+    </pre>
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">[ About ]</a>
+      <a href="#projects">[ Projects ]</a>
+      <a href="#contact">[ Contact ]</a>
     </nav>
   </header>
 
-  <main class="container" id="projects">
-    <h2 class="section-title">Projects</h2>
+  <main class="container">
+    <!-- About Section at Top -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>I like security research! I also do math and ML sometimes.</p>
+    </section>
 
-    <div class="category">Cybersecurity</div>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
 
-    <div class="project-card">
-      <h3>Browser Exploitation</h3>
-      <p>Research + implementation work on modern browser exploitation primitives.</p>
-      <a href="https://github.com/nehaka02/Chrome-Exploitation/tree/main" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="category">/// Cybersecurity</div>
 
-    <div class="project-card">
-      <h3>Fuzzing Leaked Firewall Code</h3>
-      <p>Fuzzing and security auditing of exposed firewall firmware.</p>
-      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="project-card">
+        <h3>Browser Exploitation</h3>
+        <p>Research + implementation work on modern browser exploitation primitives.</p>
+        <a href="https://github.com/nehaka02/Chrome-Exploitation/tree/main" target="_blank">[ View on GitHub → ]</a>
+      </div>
 
-    <div class="project-card">
-      <h3>Custom C2 Server for Apache Vulnerability</h3>
-      <p>Exploit chain demonstration + C2 server design.</p>
-      <a href="https://github.com/nehaka02/564-Final-Project/tree/main" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="project-card">
+        <h3>Fuzzing Leaked Firewall Code</h3>
+        <p>Fuzzing and security auditing of exposed firewall firmware.</p>
+        <a href="https://github.com/yourusername/project2" target="_blank">[ View on GitHub → ]</a>
+      </div>
 
-    <div class="category">Applied Math</div>
+      <div class="project-card">
+        <h3>Custom C2 Server for Apache Vulnerability</h3>
+        <p>Exploit chain demonstration + C2 server design.</p>
+        <a href="https://github.com/nehaka02/564-Final-Project/tree/main" target="_blank">[ View on GitHub → ]</a>
+      </div>
 
-    <div class="project-card">
-      <h3>A Mathematical Investigation of Monte Carlo Tree Search</h3>
-      <p>Theoretical study of MCTS convergence, tuning, and regret.</p>
-      <a href="Monte_Carlo_Tree_Search.pdf" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="category">/// Applied Math & ML</div>
 
-    <div class="project-card">
-      <h3>Understanding Turing Pattern Formation on Butterfly Wings</h3>
-      <p>Analysis + simulations of morphogen interactions and pattern emergence.</p>
-      <a href="Color_Pattern_Formation_in_the_Butterfly_Wing.pdf" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="project-card">
+        <h3>A Mathematical Investigation of Monte Carlo Tree Search</h3>
+        <p>Theoretical study of MCTS convergence, tuning, and regret.</p>
+        <a href="Monte_Carlo_Tree_Search.pdf" target="_blank">[ View PDF → ]</a>
+      </div>
 
-     <div class="project-card">
-       <h3>WiFi-Based 3D Human Pose Estimation</h3>
-       <p>Using deep learning techniques (CNN + transformer architectures) to regress 3D human pose from WiFi CSI.</p>
-       <a href="Color_Pattern_Formation_in_the_Butterfly_Wing.pdf" target="_blank">View on GitHub →</a>
-    </div>
+      <div class="project-card">
+        <h3>Understanding Turing Pattern Formation on Butterfly Wings</h3>
+        <p>Analysis + simulations of morphogen interactions and pattern emergence.</p>
+        <a href="Color_Pattern_Formation_in_the_Butterfly_Wing.pdf" target="_blank">[ View PDF → ]</a>
+      </div>
+
+      <div class="project-card">
+        <h3>WiFi-Based 3D Human Pose Estimation</h3>
+        <p>Using deep learning techniques (CNN + transformer architectures) to regress 3D human pose from WiFi CSI.</p>
+        <a href="WiFi_Pose_Estimation.pdf" target="_blank">[ View PDF → ]</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: <a href="mailto:nehaka02@gmail.com" style="color: var(--text-black); font-weight: bold;">nehaka02@gmail.com</a></p>
+    </section>
   </main>
 
-  <section class="container" id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>I like security research! I also do math and ML sometimes.</p>
-  </section>
-
-  <section class="container" id="contact">
-    <h2 clas
+  <footer>
+    <p>© Neha Aryasomayajula — Built minimal.</p>
+  </footer>
+</body>
+</html>

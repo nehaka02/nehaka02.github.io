@@ -26,18 +26,23 @@
       padding: 3rem 1rem 1rem 1rem;
       text-align: center;
     }
-
+    
     .ascii-art {
       display: inline-block;
       text-align: left;
       font-family: "Courier New", Courier, monospace;
-      font-size: 11px;
+      font-size: 10px;
       line-height: 1.1;
       white-space: pre;
       color: var(--text-black);
       overflow-x: auto;
       max-width: 100%;
       margin-bottom: 1.5rem;
+    
+      /* Makes light/thin characters pop */
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-shadow: 0.3px 0 0 var(--text-black), -0.3px 0 0 var(--text-black);
     }
 
     nav {
@@ -132,9 +137,9 @@
 <body>
   <header>
     <pre class="ascii-art">
- _  _ ____ _  _ ____    ____ ____ _  _ ____ ____ ____ _  _ ____ _  _  _ ____ _    ____ 
- |\ | |___ |__| |__|    |__| |__/ |__| |___ |__/ |__| |\ | |__| |__|  | |__| |    |__| 
- | \| |___ |  | |  |    |  | |  \  |  |__|  |  \ |  | | \| |  | |  | \| |  | |___ |  | 
+ _  _ ____ _  _ ____   
+ |\ | |___ |__| |__|    
+ | \| |___ |  | |  |    
     </pre>
     <nav>
       <a href="#about">[ About ]</a>
@@ -147,7 +152,7 @@
     <!-- About Section at Top -->
     <section id="about">
       <h2 class="section-title">About Me</h2>
-      <p>I like security research! I also do math and ML sometimes.</p>
+      <p>I'm Neha Aryasomayajula. I like security research! I also do math and ML sometimes.</p>
     </section>
 
     <!-- Projects Section -->
@@ -179,19 +184,19 @@
       <div class="project-card">
         <h3>A Mathematical Investigation of Monte Carlo Tree Search</h3>
         <p>Theoretical study of MCTS convergence, tuning, and regret.</p>
-        <a href="Monte_Carlo_Tree_Search.pdf" target="_blank">[ View PDF → ]</a>
+        <a href="assets/Monte_Carlo_Tree_Search.pdf" target="_blank">[ View PDF → ]</a>
       </div>
 
       <div class="project-card">
         <h3>Understanding Turing Pattern Formation on Butterfly Wings</h3>
         <p>Analysis + simulations of morphogen interactions and pattern emergence.</p>
-        <a href="Color_Pattern_Formation_in_the_Butterfly_Wing.pdf" target="_blank">[ View PDF → ]</a>
+        <a href="assets/Color_Pattern_Formation_in_the_Butterfly_Wing.pdf" target="_blank">[ View PDF → ]</a>
       </div>
 
       <div class="project-card">
         <h3>WiFi-Based 3D Human Pose Estimation</h3>
         <p>Using deep learning techniques (CNN + transformer architectures) to regress 3D human pose from WiFi CSI.</p>
-        <a href="WiFi_Pose_Estimation.pdf" target="_blank">[ View PDF → ]</a>
+        <a href="assets/Wifi-HPE.pdf" target="_blank">[ View PDF → ]</a>
       </div>
     </section>
 
